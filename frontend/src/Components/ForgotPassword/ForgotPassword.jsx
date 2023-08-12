@@ -1,0 +1,40 @@
+import React, {useState} from 'react';
+import "./ForgotPassword.css";
+import { Typography, Button } from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
+import { forgotPassword } from '../../Actions/User';
+
+const ForgotPassword = () => {
+
+  const [email, setEmail] = useState("");
+  const dispatch = useDispatch();
+  const {loading} = useSelector((state)=> state.like);
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    dispatch(forgotPassword(email));
+  }
+
+  return (
+    <div className="forgotPassword">
+      <form className="forgotPasswordForm" onSubmit={submitHandler}>
+
+        <Typography variant="h3" style={{ padding: '2vmax' }}>Social App</Typography>
+
+        <input
+          type="email"
+          placeholder="Email"
+          required
+          className="forgotPasswordInputs"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)} />
+
+        <Button disabled={loading} type="submit">Send Token</Button>
+
+      </form>
+
+    </div>
+  )
+}
+
+export default ForgotPassword
