@@ -18,9 +18,6 @@ const Home = () => {
         dispatch(getAllUsers());
     }, [dispatch]);
  
-    
-    
-
     return loading === true || usersLoading === true ? (<Loader />) : (
         <div className="home">
             <div className="homeleft">
@@ -58,4 +55,4 @@ const Home = () => {
     );
 };
 
-export default Home
+export default Home;
