@@ -20,7 +20,7 @@ const user = require("./routes/user");
 app.use("/api/v1", post);
 app.use("/api/v1", user);
 
-app.get("*", (req, res)=> {
+app.get("/", (req, res)=> {
   res.sendFile(path.resolve(__dirname, "/build"));
 });
 
