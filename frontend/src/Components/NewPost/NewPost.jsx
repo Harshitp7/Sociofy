@@ -9,10 +9,9 @@ const NewPost = () => {
   const [image, setImage] = useState(null);
   const [caption, setCaption] = useState("");
 
-  const { loading } = useSelector((state) => state.like);
+  const { loading} = useSelector((state) => state.like);
   const dispatch = useDispatch();
-  
-
+ 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
 

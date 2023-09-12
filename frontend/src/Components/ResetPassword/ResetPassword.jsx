@@ -6,7 +6,6 @@ import { resetPassword } from "../../Actions/User";
 import "./ResetPassword.css";
 
 const ResetPassword = () => {
-
   const [newPassword, setNewPassword] = useState("");
   const dispatch = useDispatch();
   const params = useParams();
@@ -17,7 +16,6 @@ const ResetPassword = () => {
     dispatch(resetPassword(params.token, newPassword));
   };
 
-  
   return (
     <div className="resetPassword">
       <form className="resetPasswordForm" onSubmit={submitHandler}>

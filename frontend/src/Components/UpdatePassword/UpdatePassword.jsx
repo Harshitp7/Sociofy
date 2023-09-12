@@ -17,7 +17,7 @@ const UpdatePassword = () => {
     dispatch(updatePassword(oldPassword, newPassword));
   };
 
-  
+
   return (
     <div className="updatePassword">
       <form className="updatePasswordForm" onSubmit={submitHandler}>

@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import "./Register.css";
 import { registerUser } from "../../Actions/User";
 
-
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -13,8 +12,8 @@ const Register = () => {
   const [password, setPassword] = useState("");
 
   const dispatch = useDispatch();
-
-  const { loading } = useSelector((state) => state.user);
+  
+  const { loading} = useSelector((state) => state.user);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -34,6 +33,7 @@ const Register = () => {
     dispatch(registerUser(name, email, password, avatar));
   };
 
+  
   return (
     <div className="register">
       <form className="registerForm" onSubmit={submitHandler}>
