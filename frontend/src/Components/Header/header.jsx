@@ -1,5 +1,5 @@
 import React, {useState } from 'react';
-import "./header.css";
+import "./Header.css";
 import { Link } from "react-router-dom";
 import {
     Home,

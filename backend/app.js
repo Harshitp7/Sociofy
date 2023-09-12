@@ -21,6 +21,8 @@ const user = require("./routes/user");
 app.use("/api/v1", post);
 app.use("/api/v1", user);
 
+// app.use(express.static(path.join(__dirname, "./build")));
+
 app.get("*", (req, res)=> {
   res.sendFile(path.resolve(__dirname, "./build/index.html"));
 });
